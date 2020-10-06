@@ -3,63 +3,63 @@ Implement the examples of 《Unity Shader 入门精要》 in Cocos Creator 3D 1.
 
 # Index
 - Chapter 5
-  - Simple Shader Case
+  - [x] Simple Shader Case
 - Chapter6
-  - Diffuse Vertex Level
-  - Diffuse Pixel Level
-  - Half Lambert
-  - Specular Vertex Level
-  - Specular Pixel Level
-  - BlinnPhong
-  - BlinnPhong Use Cocos Build-in Functions
+  - [ ] Diffuse Vertex Level
+  - [ ] Diffuse Pixel Level
+  - [ ] Half Lambert
+  - [ ] Specular Vertex Level
+  - [ ] Specular Pixel Level
+  - [ ] BlinnPhong
+  - [ ] BlinnPhong Use Cocos Build-in Functions
 - Chapter 7
-  - Single Texture
-  - Ramp Texture
-  - NormalMap World Space
-  - NormalMap Tangent Space
-  - Mask Texture
+  - [ ] Single Texture
+  - [ ] Ramp Texture
+  - [ ] NormalMap World Space
+  - [ ] NormalMap Tangent Space
+  - [ ] Mask Texture
 - Chapter 8
-  - Alpha Test
-  - Alpha Blend
-  - Alpha Blend ZWrite
-  - Alpha Blend Both Sided
+  - [ ] Alpha Test
+  - [ ] Alpha Blend
+  - [ ] Alpha Blend ZWrite
+  - [ ] Alpha Blend Both Sided
 - Chapter 9
-  - Forward Rendering (with multi light)
-  - Shadow
-  - Alpha Test With Shadow
-  - Alpha Blend With Shadow
-  - Attenuation And Shadow Use Cocos Build-in Functions
+  - [ ] Forward Rendering (with multi light)
+  - [ ] Shadow
+  - [ ] Alpha Test With Shadow
+  - [ ] Alpha Blend With Shadow
+  - [ ] Attenuation And Shadow Use Cocos Build-in Functions
 - Chapter 10
-  - Reflection
-  - Refraction
-  - Mirror
-  - Fresnel
-  - Glass Refraction
+  - [ ] Reflection
+  - [ ] Refraction
+  - [ ] Mirror
+  - [ ] Fresnel
+  - [ ] Glass Refraction
 - Chapter 11
-  - Image Sequence Animation
-  - Scrolling Background
-  - Billboard
-  - Water
-  - Vertex Animation With Shadow
+  - [ ] Image Sequence Animation
+  - [ ] Scrolling Background
+  - [ ] Billboard
+  - [ ] Water
+  - [ ] Vertex Animation With Shadow
 - Chapter 12
-  - [x] Bloom
-  - [x] Brightness Saturation And Contrast
-  - [x] Edge Detection
-  - [x] Gaussian Blur
-  - [x] Motion Blur
+  - ~~Bloom~~
+  - ~~Brightness Saturation And Contrast~~
+  - ~~Edge Detection~~
+  - ~~Gaussian Blur~~
+  - ~~Motion Blur~~
 - Chapter 13
-  - [x] Edge Detect Normal And Depth
-  - [x] Fog With Depth Texture
-  - [x] Motion Blur With Depth Texture
+  - ~~Edge Detect Normal And Depth~~
+  - ~~Fog With Depth Texture~~
+  - ~~Motion Blur With Depth Texture~~
 - Chapter 14
-  - Toon Shading
-  - Hatching
+  - [ ] Toon Shading
+  - [ ] Hatching
 - Chapter 15
-  - Dissolve
-  - Water Wave
-  - Fog With Noise
+  - [ ] Dissolve
+  - [ ] Water Wave
+  - [ ] Fog With Noise
 - Chapter 17
-  - [x] Bump Diffuse (Surf)
-  - [x] Normal Extrusion (Surf)
+  - ~~Bump Diffuse (Surf)~~
+  - ~~Normal Extrusion (Surf)~~
 - Chapter 18
-  - Custom PBR
+  - [ ] Custom PBR
