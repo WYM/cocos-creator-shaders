@@ -5,8 +5,8 @@ Implement the examples of 《Unity Shader 入门精要》 in Cocos Creator 3D 1.
 - Chapter 5
   - [x] Simple Shader Case
 - Chapter6
-  - [ ] Diffuse Vertex Level
-  - [ ] Diffuse Pixel Level
+  - [x] Diffuse Vertex Level
+  - [x] Diffuse Pixel Level
   - [ ] Half Lambert
   - [ ] Specular Vertex Level
   - [ ] Specular Pixel Level
