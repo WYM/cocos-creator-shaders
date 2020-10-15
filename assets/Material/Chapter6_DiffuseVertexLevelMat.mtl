@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "8ea171d0-d00d-4cd7-a5ba-6e29ae87dafc"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      },
+      "depthStencilState": {},
+      "rasterizerState": {}
+    }
+  ],
+  "_props": [
+    {}
+  ]
+}
