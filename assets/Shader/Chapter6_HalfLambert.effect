@@ -1,0 +1,55 @@
+// 半兰伯特
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: vert:vert
+      frag: frag:frag
+      properties: &props
+        diffuse: { value: [1, 1, 1, 1], editor: { type: color } }
+}%
+
+CCProgram vert %{
+  precision highp float;
+  #include <decode-standard>
+  #include <cc-global>
+  #include <cc-local>
+
+  out vec4 v_pos;
+  out vec4 v_worldNormal;
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCDecode(In);
+
+    v_pos = cc_matWorld * In.position;
+    v_worldNormal = normalize((cc_matWorldIT * vec4(In.normal, 0.0)));
+
+    return cc_matProj * (cc_matView * cc_matWorld) * v_pos;
+  }
+}%
+
+CCProgram frag %{
+  precision highp float;
+  #include <output>
+  #include <common>
+
+  in vec4 v_pos;
+  in vec4 v_worldNormal;
+
+  uniform Constant {
+    vec4 diffuse;
+  };
+
+  vec4 frag () {
+    vec3 ambient = cc_ambientGround.xyz;
+    vec3 worldNormal = normalize(v_worldNormal.xyz);
+    vec3 worldLight = normalize(-cc_mainLitDir.xyz);
+
+    float halfLambert = dot(worldNormal, worldLight) * 0.5 + 0.5;
+    vec3 diffuse = cc_mainLitColor.rgb * diffuse.rgb * halfLambert;
+    vec4 color = vec4(diffuse + ambient, 1.0);
+
+    return CCFragOutput(color);
+  }
+}%
