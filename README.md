@@ -8,7 +8,7 @@ Implement the examples of 《Unity Shader 入门精要》 in Cocos Creator 3D 1.
   - [x] Diffuse Vertex Level
   - [x] Diffuse Pixel Level
   - [x] Half Lambert
-  - [ ] Specular Vertex Level
+  - [x] Specular Vertex Level
   - [ ] Specular Pixel Level
   - [ ] BlinnPhong
   - [ ] BlinnPhong Use Cocos Build-in Functions

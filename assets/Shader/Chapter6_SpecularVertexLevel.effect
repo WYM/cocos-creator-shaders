@@ -1,0 +1,61 @@
+// 顶点球面
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: vert:vert
+      frag: frag:frag
+      properties: &props
+        diffuse: { value: [1, 1, 1, 1], editor: { type: color } }
+        specular: { value: [1, 1, 1, 1], editor: { type: color } }
+        gloss: { value: 20.0 }
+}%
+
+CCProgram vert %{
+  precision highp float;
+  #include <decode-standard>
+  #include <cc-global>
+  #include <cc-local> 
+
+  out vec4 v_pos;
+  out vec4 v_color;
+
+  uniform Constant {
+    vec4 diffuse;
+    vec4 specular;
+    float gloss;
+  };
+
+  vec4 vert () {
+    StandardVertInput In;
+    CCDecode(In);
+
+    v_pos = cc_matWorld * In.position;
+    vec3 ambient = cc_ambientGround.xyz;
+
+    vec3 worldNormal = normalize((cc_matWorldIT * vec4(In.normal, 0.0)).xyz);
+    vec3 worldLight = normalize(-cc_mainLitDir.xyz);
+
+    vec3 _diffuse = cc_mainLitColor.rgb * diffuse.rgb * saturate(dot(worldNormal, worldLight));
+
+    vec3 reflectDir = normalize(reflect(-worldLight, worldNormal));
+    vec3 viewDir = normalize(cc_cameraPos.xyz - (cc_matWorld * In.position).xyz);
+
+    vec3 _specular = cc_mainLitColor.rgb * specular.rgb * pow(saturate(dot(reflectDir, viewDir)), gloss);
+    v_color = vec4(ambient + _diffuse + _specular, 1.0);
+
+    return cc_matProj * (cc_matView * cc_matWorld) * v_pos;
+  }
+}%
+
+CCProgram frag %{
+  precision highp float;
+  #include <output>
+
+  in vec4 v_pos;
+  in vec4 v_color;
+
+  vec4 frag () {
+    return CCFragOutput(v_color);
+  }
+}%
